@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="zxx">
+<head>
+    {% load static %}
+        {% load widget_tweaks %}
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Step to nature|A step towards less pollution</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'assets/img/favicon.ico' %}">
+
+    <!-- CSS here -->
+        <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'assets/css/owl.carousel.min.css' %}">
+        <link rel="stylesheet" href="{% static 'assets/css/flaticon.css' %}">
+        <link rel="stylesheet" href="{% static 'assets/css/slicknav.css' %}">
+        <link rel="stylesheet" href="{% static 'assets/css/animate.min.css' %}">
+        <link rel="stylesheet" href="{% static 'assets/css/magnific-popup.css' %}">
+        <link rel="stylesheet" href="{% static 'assets/css/fontawesome-all.min.css' %}">
+        <link rel="stylesheet" href="{% static 'assets/css/themify-icons.css' %}">
+        <link rel="stylesheet" href="{% static 'assets/css/slick.css' %}">
+        <link rel="stylesheet" href="{% static 'assets/css/nice-select.css' %}">
+        <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    <script language="javascript" src="{% static 'assets/js/validation.js' %}" type="text/javascript"></script>
+</head>
+<body>
+<!--  <div class="alert alert-danger alert-dismissible">-->
+<!--      {% for message in messages %}-->
+
+<!--    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>-->
+<!--    <strong>Danger!</strong> {{ message }}-->
+<!--      {% endfor %}-->
+
+  </div>
+   <header>
+        <!-- Header Start -->
+            <div class="header-area">
+                <div class="main-header header-sticky">
+                    <div class="container-fluid">
+                        <div class="menu-wrapper">
+                            <!-- Logo -->
+                            <div class="logo">
+                                <a href="index"><img src="{% static 'assets/img/logo/logo.png' %}" alt=""></a>
+                            </div>
+                            <!-- Main-menu -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <!-- Header End -->
+    </header>
+<main>
+      <div class="container">
+          <div class="row my-3 ">
+              <div class="col-sm-6 offset-sm-3">
+                  <h2><font color="#2EF606">Admin Login</font></h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <form  class="shadow p-5" method="POST">
+                      {% csrf_token %}
+                      <h5>Username</h5>
+                      <div class="col-md-12 form-group p_star">
+                          {% render_field form.username class="form-control" placeholder="Username" %}
+                      </div>
+                      <h5>Password</h5>
+                      <div class="col-md-12 form-group p_star">
+                          {% render_field form.password class="form-control" placeholder="Password" %}
+                      </div>
+                      <div class="col-md-12 form-group">
+                          <input type="submit" value="Login" class="btn">
+                      </div>
+                  </form>
+              </div>
+          </div>
+      </div>
+</main>
+
+    <script src="{% static './assets/js/vendor/modernizr-3.5.0.min.js' %}"></script>
+    <!-- Jquery, Popper, Bootstrap -->
+    <script src="{% static './assets/js/vendor/jquery-1.12.4.min.js' %}"></script>
+    <script src="{% static './assets/js/popper.min.js' %}"></script>
+    <script src="{% static './assets/js/bootstrap.min.js' %}"></script>
+    <!-- Jquery Mobile Menu -->
+    <script src="{% static './assets/js/jquery.slicknav.min.js' %}"></script>
+
+    <!-- Jquery Slick , Owl-Carousel Plugins -->
+    <script src="{% static './assets/js/owl.carousel.min.js' %}"></script>
+    <script src="{% static './assets/js/slick.min.js' %}"></script>
+
+    <!-- One Page, Animated-HeadLin -->
+    <script src="{% static './assets/js/wow.min.js' %}"></script>
+    <script src="{% static './assets/js/animated.headline.js' %}"></script>
+    <script src="{% static './assets/js/jquery.magnific-popup.js' %}"></script>
+
+    <!-- Scrollup, nice-select, sticky -->
+    <script src="{% static './assets/js/jquery.scrollUp.min.js' %}"></script>
+    <script src="{% static './assets/js/jquery.nice-select.min.js'  %}"></script>
+    <script src="{% static './assets/js/jquery.sticky.js' %}"></script>
+
+    <!-- contact js -->
+    <script src="{% static './assets/js/contact.js' %}"></script>
+    <script src="{% static './assets/js/jquery.form.js' %}"></script>
+    <script src="{% static './assets/js/jquery.validate.min.js' %}"></script>
+    <script src="{% static './assets/js/mail-script.js' %}"></script>
+    <script src="{% static './assets/js/jquery.ajaxchimp.min.js' %}"></script>
+
+    <!-- Jquery Plugins, main Jquery -->
+    <script src="{% static './assets/js/plugins.js' %}"></script>
+    <script src="{% static './assets/js/main.js' %}"></script>
+<!--    <script src="{% static './assets/js/validation.js' %}"></script>-->
+
+</body>
+</html>

@@ -1,0 +1,413 @@
+<!doctype html>
+<html class="no-js" lang="zxx" xmlns="http://www.w3.org/1999/html">
+<head>
+    {% load static %}
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 10s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+</style>
+    <title>Step to nature|A step towards less pollution</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'assets/img/favicon.ico' %}">
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/flaticon.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/slicknav.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/animate.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/magnific-popup.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/fontawesome-all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/themify-icons.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/slick.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/nice-select.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/abc.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+
+</head>
+
+<body>
+    <!--? Preloader Start -->
+    <div id="preloader-active">
+        <div class="preloader d-flex align-items-center justify-content-center">
+            <div class="preloader-inner position-relative">
+                <div class="preloader-circle"></div>
+                <div class="preloader-img pere-text">
+                    <img src="{% static 'assets/img/logo/logo.png' %}" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Preloader Start -->
+    <header>
+        <!-- Header Start -->
+        <div class="header-area">
+            <div class="main-header header-sticky">
+                <div class="container-fluid">
+                    <div class="menu-wrapper">
+                        <!-- Logo -->
+                        <div class="logo">
+                            <a href="../home"><img src="{% static 'assets/img/logo/logo.png' %}" alt=""></a>
+                        </div>
+                        <!-- Main-menu -->
+                        <div class="main-menu d-none d-lg-block">
+                            <nav>
+                                <div id="container">
+                                    <ul>
+                                        <li><a href="#">Home</a></li>
+                                        <li><a href="../customer-home">Plants</a>
+                                        <li><a href="../my-profile">Profile</a>
+                                        <li><a href="../my-order">Orders</a></li>
+                                        <li><a href="#">More</a>
+                                            <ul class="submenu">
+                                                <li><a href="../aboutus">About Us</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </nav>
+                        </div>
+                        <div class="header-right ">
+                            <ul>
+                                <li><a href="../logout"><span class="flaticon-user">Logout</span></a> </li>
+                            </ul>
+                        </div>
+
+
+                    </div>
+                    <!-- Mobile Menu -->
+                    <div class="col-12">
+                        <div class="mobile_menu d-block d-lg-none"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Header End -->
+    </header>
+
+    {% block content %}
+
+    {% endblock %}
+    <main>
+        <!--? slider Area Start -->
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <img src="{% static 'assets/img/hero/Mossframe_18.jpg' %}" alt="">
+</div>
+
+<div class="mySlides fade">
+  <img src="{% static 'assets/img/hero/resinpots_18.jpg' %}" alt="">
+</div>
+
+<div class="mySlides fade">
+  <img src="{% static 'assets/img/hero/terrariumkits_18.jpg' %}" alt="">
+</div>
+
+</div>
+<br>
+
+<div style="
+text-align:center">
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+</div>
+
+<script>
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 10000); //
+}
+</script>
+        <div class="watch-area section-padding-100">
+            <div class="container">
+                <div class="row align-items-center justify-content-between padding-50">
+                    <div class="col-lg-5 col-md-5">
+                        <div class="watch-details mb-40">
+                            <h2>Moss Frames</h2>
+                            <h6>Step to nature's Moss Frames are 100% natural and preserved. They do not need any watering & sunlight and are meant to be kept indoors only. Bring in the Jungle to your home.</h6>
+                            <a href="#" class="btn">Shop for Moss Frames </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-10">
+                        <div class="choice-watch-img mb-40">
+                            <img src="{% static 'assets/img/gallery/mossframe1.jpg' %}" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="row align-items-center justify-content-between">
+                    <div class="col-lg-6 col-md-6 col-sm-10">
+                        <div class="choice-watch-img mb-40">
+                            <img src="{% static 'assets/img/gallery/terrarium 1.jpg' %}" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-md-6">
+                        <div class="watch-details mb-40">
+                            <h2>Terrarium</h2>
+                            <h6>Make your own terrariums with our easy to follow terrarium kit designs! Get your hands dirty!</h6>
+                            <a href="#" class="btn">Show Terrarium</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h2>Featured Products</h2>
+        <div class="popular-items section-padding10">
+            <div class="container">
+                <!-- Section tittle -->
+                <div class="row">
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                        <div class="single-popular-items mb-50 text-center">
+                            <div class="popular-img">
+                                <img src="{% static 'assets/img/gallery/Elephants in a Jungle Water Fountain.jpg' %}" alt="">
+                                <div class="img-cap">
+                                    <a href="#">
+                                    <span>Show more</span></a>
+                                </div>
+                            </div>
+                            <div class="popular-caption">
+                                <h3><a href="#">Elephants in a Jungle Water Fountain</a></h3>
+                                <span>RS: 1500</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                        <div class="single-popular-items mb-50 text-center">
+                            <div class="popular-img">
+                                <img src="{% static 'assets/img/gallery/Smart Garden3_Indoor Hydroponic Growing Kit -3 Pods.jpg' %}" alt="">
+                                <div class="img-cap">
+                                    <a href="#">
+                                        <span>Show more</span></a>
+                                </div>
+                                <div class="favorit-items">
+                                    <a href="wishlist">
+                                        <span class="flaticon-heart"></span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="popular-caption">
+                                <h3>Smart Garden-Indoor Hydroponic Growing Kit -3 Pods</a></h3>
+                                <span>RS: 2000</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                        <div class="single-popular-items mb-50 text-center">
+                            <div class="popular-img">
+                                <img src="{% static 'assets/img/gallery/Suncatcher 3D Bird.jpg' %}" alt="">
+                                <div class="img-cap">
+                                    <a href="#">
+                                        <span>Show more</span></a>
+                                </div>
+                                <div class="favorit-items">
+                                    <a href="wishlist">
+                                        <span class="flaticon-heart"></span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="popular-caption">
+                                <h3>Suncatcher 3D Bird</a></h3>
+                                <span>RS: 300</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                        <div class="single-popular-items mb-50 text-center">
+                            <div class="popular-img">
+                                <img src="{% static 'assets/img/gallery/Carrot Microgreen Seeds.jpg' %}" alt="">
+                                <div class="img-cap">
+                                    <a href="#">
+                                        <span>Show more</span></a>
+                                </div>
+                                <div class="favorit-items">
+                                    <a href="wishlist">
+                                        <span class="flaticon-heart"></span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="popular-caption">
+                                <h3>Carrot Microgreen Seeds</h3>
+                                <span>RS: 100</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                        <div class="single-popular-items mb-50 text-center">
+                            <div class="popular-img">
+                                <img src="{% static 'assets/img/gallery/Hoya Carnosa.jpg' %}" alt="">
+                                <div class="img-cap">
+                                    <a href="#">
+                                        <span>Show more</span></a>
+                                </div>
+                                <div class="favorit-items">
+                                    <a href="wishlist">
+                                        <span class="flaticon-heart"></span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="popular-caption">
+                                <h3>Hoya Carnosa 'Amore'</h3>
+                                <span>RS: 250</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                        <div class="single-popular-items mb-50 text-center">
+                            <div class="popular-img">
+                                <img src="{% static 'assets/img/gallery/Cute Tortoise Resin Succulent Pot.jpg' %}" alt="">
+                                <div class="img-cap">
+                                    <a href="#">
+                                        <span>Show more</span></a>
+                                </div>
+                                <div class="favorit-items">
+                                    <a href="wishlist">
+                                        <span class="flaticon-heart"></span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="popular-caption">
+                                <h3>Cute Tortoise Resin Succulent Pot</h3>
+                                <span>RS: 500</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="watch-area section-padding-100">
+            <div class="container">
+                <div class="row align-items-center justify-content-between padding-50">
+                    <div class="col-lg-5 col-md-5">
+                        <div class="watch-details mb-40">
+                            <h2>Cute Miniatures</h2>
+                            <h6>Make your plants feel loved with having our bright and colourful miniatures around them! Adorable and cute would be an understatement!</h6>
+                            <a href="#" class="btn">Shop for Miniatures </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-10">
+                        <div class="choice-watch-img mb-40">
+                            <img src="{% static 'assets/img/gallery/Miniature Sleeping Baby Deer Decor.jpg' %}" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Watch Choice  End-->
+        <!--? Shop Method Start-->
+            <br><br><br>
+            <div class="container">
+                <div class="method-wrapper">
+                    <div class="row d-flex justify-content-between">
+                        <div class="col-xl-4 col-lg-4 col-md-6">
+                            <div class="single-method mb-40">
+                           &nbsp;&nbsp;     <img loading="lazy" src="//cdn.shopify.com/s/files/1/0284/2450/files/plant_60x.png?v=1614291109" class="lazyload"  alt="">
+                                <h4>100,000+ Plants Shipped</h4>
+                                <h6>Found great new homes!</h6>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-6">
+                            <div class="single-method mb-40">
+                                <img loading="lazy" src="//cdn.shopify.com/s/files/1/0284/2450/files/delivery_60x.png?v=1614291168" class="lazyload" loading="lazy" alt="">
+                                <h4>Fast Delivery</h4>
+                                <h6>Packaged with Care and Love!</h6>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-6">
+                            <div class="single-method mb-40">
+                                <img loading="lazy" src="//cdn.shopify.com/s/files/1/0284/2450/files/support_60x.png?v=1614291168" class="lazyload" loading="lazy" alt="">
+                                <h4>Help &amp; Support</h4>
+                                <h6>Friendly &amp; Quick!</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </main>
+    <footer>
+        <!-- Footer Start-->
+
+        <!-- Footer End-->
+    </footer>
+    <!--? Search model Begin -->
+    <div class="search-model-box">
+        <div class="h-100 d-flex align-items-center justify-content-center">
+            <div class="search-close-btn">+</div>
+            <form class="search-model-form">
+                <input type="text" id="search-input" placeholder="Searching key.....">
+            </form>
+        </div>
+    </div>
+    <!-- Search model end -->
+
+    <!-- JS here -->
+
+    <script src="{% static './assets/js/vendor/modernizr-3.5.0.min.js' %}"></script>
+    <!-- Jquery, Popper, Bootstrap -->
+    <script src="{% static './assets/js/vendor/jquery-1.12.4.min.js' %}"></script>
+    <script src="{% static './assets/js/popper.min.js' %}"></script>
+    <script src="{% static './assets/js/bootstrap.min.js' %}"></script>
+    <!-- Jquery Mobile Menu -->
+    <script src="{% static './assets/js/jquery.slicknav.min.js' %}"></script>
+
+    <!-- Jquery Slick , Owl-Carousel Plugins -->
+    <script src="{% static './assets/js/owl.carousel.min.js' %}"></script>
+    <script src="{% static './assets/js/slick.min.js' %}"></script>
+
+    <!-- One Page, Animated-HeadLin -->
+    <script src="{% static './assets/js/wow.min.js' %}"></script>
+    <script src="{% static './assets/js/animated.headline.js' %}"></script>
+    <script src="{% static './assets/js/jquery.magnific-popup.js' %}"></script>
+
+    <!-- Scrollup, nice-select, sticky -->
+    <script src="{% static './assets/js/jquery.scrollUp.min.js' %}"></script>
+    <script src="{% static './assets/js/jquery.nice-select.min.js' %}"></script>
+    <script src="{% static './assets/js/jquery.sticky.js' %}"></script>
+
+    <!-- contact js -->
+    <script src="{% static './assets/js/contact.js' %}"></script>
+    <script src="{% static './assets/js/jquery.form.js' %}"></script>
+    <script src="{% static './assets/js/jquery.validate.min.js' %}"></script>
+    <script src="{% static './assets/js/mail-script.js' %}"></script>
+    <script src="{% static './assets/js/jquery.ajaxchimp.min.js' %}"></script>
+
+    <!-- Jquery Plugins, main Jquery -->
+    <script src="{% static './assets/js/plugins.js' %}"></script>
+    <script src="{% static './assets/js/main.js' %}"></script>
+
+</body>
+</html>

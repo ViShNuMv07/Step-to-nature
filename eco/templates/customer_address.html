@@ -1,0 +1,241 @@
+<html>
+<head>
+    {% load static %}
+    {% load widget_tweaks %}
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Step to nature|A step towards less pollution</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'assets/img/favicon.ico' %}">
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="{% static 'assets/css/flaticon.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+<!-- jQuery library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+    <!-- Preloader Start -->
+     <header>
+        <!-- Header Start -->
+            <div class="header-area">
+                <div class="main-header header-sticky">
+                    <div class="container-fluid">
+                        <div class="menu-wrapper">
+                            <!-- Logo -->
+                            <div class="logo">
+                                <a href="index"><img src="{% static 'assets/img/logo/logo.png' %}" alt=""></a>
+                            </div>
+                            <!-- Main-menu -->
+                            <div class="main-menu d-none d-lg-block">
+                                <nav>
+                                    <div id="container">
+                                        <ul>
+                                            <li><a href="../home">Home</a></li>
+                                            <li><a href="../customer-home">Plants</a>
+                                            <li><a href="../my-profile">Profile</a></li>
+                                            <li><a href="../my-order">Orders</a>
+                                            <li><a href="../logout">logout</a>
+                                            <li><a href="#">More</a>
+                                            <ul class="submenu">
+                                                <li><a href="../aboutus">About Us</a></li>
+                                            </ul>
+                                        </li>
+                                        </ul>
+                                    </div>
+                                </nav>
+                            </div>
+
+                            <div class="header-right">
+                            <ul>
+                                <li><a href="../showcart"><span class="flaticon-shopping-cart"></span></a> </li>
+                            </ul>
+                        </div>
+                        </div>
+                        <div class="col-12">
+                        <div class="mobile_menu d-block d-lg-none"></div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        <!-- Header End -->
+    </header><br>
+  <style type="text/css">
+.form-style-1 {
+	margin:10px auto;
+	max-width: 400px;
+	padding: 20px 12px 10px 20px;
+	font: 13px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+.form-style-1 li {
+	padding: 0;
+	display: block;
+	list-style: none;
+	margin: 10px 0 0 0;
+}
+.form-style-1 label{
+	margin:0 0 3px 0;
+	padding:0px;
+	display:block;
+	font-weight: bold;
+}
+.form-style-1 input[type=text],
+.form-style-1 input[type=date],
+.form-style-1 input[type=datetime],
+.form-style-1 input[type=number],
+.form-style-1 input[type=search],
+.form-style-1 input[type=time],
+.form-style-1 input[type=url],
+.form-style-1 input[type=email],
+textarea,
+select{
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	border:1px solid #BEBEBE;
+	padding: 7px;
+	margin:0px;
+	-webkit-transition: all 0.30s ease-in-out;
+	-moz-transition: all 0.30s ease-in-out;
+	-ms-transition: all 0.30s ease-in-out;
+	-o-transition: all 0.30s ease-in-out;
+	outline: none;
+}
+.form-style-1 input[type=text]:focus,
+.form-style-1 input[type=date]:focus,
+.form-style-1 input[type=datetime]:focus,
+.form-style-1 input[type=number]:focus,
+.form-style-1 input[type=search]:focus,
+.form-style-1 input[type=time]:focus,
+.form-style-1 input[type=url]:focus,
+.form-style-1 input[type=email]:focus,
+.form-style-1 textarea:focus,
+.form-style-1 select:focus{
+	-moz-box-shadow: 0 0 8px #88D5E9;
+	-webkit-box-shadow: 0 0 8px #88D5E9;
+	box-shadow: 0 0 8px #88D5E9;
+	border: 1px solid #88D5E9;
+}
+.form-style-1 .field-divided{
+	width: 49%;
+}
+
+.form-style-1 .field-long{
+	width: 100%;
+}
+.form-style-1 .field-select{
+	width: 100%;
+}
+.form-style-1 .field-textarea{
+	height: 100px;
+}
+.form-style-1 input[type=submit], .form-style-1 input[type=button]{
+	background: #4B99AD;
+	padding: 8px 15px 8px 15px;
+	border: none;
+	color: #fff;
+}
+.form-style-1 input[type=submit]:hover, .form-style-1 input[type=button]:hover{
+	background: #4691A4;
+	box-shadow:none;
+	-moz-box-shadow:none;
+	-webkit-box-shadow:none;
+}
+.form-style-1 .required{
+	color:red;
+}
+</style>
+{%if product_in_cart%}
+<form method="post">
+  {% csrf_token %}
+<ul class="form-style-1">
+    <li>
+        <label>Email <span class="required">*</span></label>
+        {% render_field addressForm.Email class="field-long" placeholder="Email" %}
+
+    </li>
+    <li>
+        <label>Mobile <span class="required">*</span></label>
+        {% render_field addressForm.Mobile class="field-long" placeholder="Mobile" %}
+    </li>
+
+    <li>
+        <label>Shipment Address <span class="required">*</span></label>
+        {% render_field addressForm.Address id="field5" class="field-long field-textarea" placeholder="Building Number,city, pin" %}
+
+    </li>
+    <li>
+        <input type="submit" value="Proceed To Pay" >
+    </li>
+</ul>
+</form>
+{%else%}
+<br><br>
+<h1 style="text-align:center; color:red;"> First Add Product In Cart </h1>
+<br><br><br><br><br><br><br><br><br><br>
+{%endif%}
+
+<footer>
+        <div class="container">
+                <div class="method-wrapper">
+                    <div class="row d-flex justify-content-between">
+                        <div class="col-xl-4 col-lg-4 col-md-6">
+                            <div class="single-method mb-40">
+                           &nbsp;&nbsp;     <img loading="lazy" src="//cdn.shopify.com/s/files/1/0284/2450/files/plant_60x.png?v=1614291109" class="lazyload"  alt="">
+                                <h4>100,000+ Plants Shipped</h4>
+                                <h6>Found great new homes!</h6>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-6">
+                            <div class="single-method mb-40">
+                                <img loading="lazy" src="//cdn.shopify.com/s/files/1/0284/2450/files/delivery_60x.png?v=1614291168" class="lazyload" loading="lazy" alt="">
+                                <h4>Fast Delivery</h4>
+                                <h6>Packaged with Care and Love!</h6>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-6">
+                            <div class="single-method mb-40">
+                                <img loading="lazy" src="//cdn.shopify.com/s/files/1/0284/2450/files/support_60x.png?v=1614291168" class="lazyload" loading="lazy" alt="">
+                                <h4>Help &amp; Support</h4>
+                                <h6>Friendly &amp; Quick!</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </footer>
+<!-- content start-->
+{% block content %}
+
+{% endblock content %}
+<!-- content end-->
+<br><br>
+    <script>
+$(document).ready(function(){
+
+function openNav() {
+document.getElementById("mySidenav").style.width = "70%";
+
+document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+}
+
+function closeNav() {
+document.getElementById("mySidenav").style.width = "0";
+document.body.style.backgroundColor = "rgba(0,0,0,0)";
+}
+
+
+});
+</script>
+
+</body>
+</html>

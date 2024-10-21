@@ -1,0 +1,119 @@
+{% extends 'customer_base.html' %}
+{% load widget_tweaks %}
+{% block content %}
+
+<head>
+  <style media="screen">
+    body {
+      background-color:#ffffff;
+    }
+    a:link {
+      text-decoration: none;
+    }
+
+    .note {
+      text-align: center;
+      height: 80px;
+      background: -webkit-linear-gradient(left, #0072ff, #8811c5);
+      color: #fff;
+      font-weight: bold;
+      line-height: 80px;
+    }
+
+    .form-content {
+      padding: 5%;
+      border: 1px solid #ced4da;
+      margin-bottom: 2%;
+    }
+
+    .form-control {
+      border-radius: 1.5rem;
+    }
+
+    .btnSubmit {
+      border: none;
+      border-radius: 1.5rem;
+      padding: 1%;
+      width: 20%;
+      cursor: pointer;
+      background: #0062cc;
+      color: #fff;
+    }
+
+    .menu{
+      top: 50px;
+    }
+  </style>
+
+
+</head>
+<br><br><br><br><br><br>
+<!------ update page for doctor by admin(sumit)  ---------->
+<form method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+  <div class="container register-form">
+    <div class="form">
+      <div class="note">
+        <p>EDIT PROFILE</p>
+      </div>
+      <div class="form-content">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              {% render_field userForm.first_name class="form-control" placeholder="First Name" %}
+            </div>
+            <div class="form-group">
+              {% render_field userForm.username class="form-control" placeholder="Username" %}
+            </div>
+            <div class="form-group">
+              {% render_field customerForm.mobile class="form-control" placeholder="Mobile" %}
+            </div>
+            <div class="form-group">
+              {% render_field customerForm.profile_pic class="form-control" placeholder="Profile Picture" %}
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              {% render_field userForm.last_name class="form-control" placeholder="Last Name" %}
+            </div>
+            <div class="form-group">
+              {% render_field userForm.password class="form-control" placeholder="Password" %}
+            </div>
+            <div class="form-group">
+              {% render_field customerForm.address class="form-control" placeholder="Address" %}
+            </div>
+
+          </div>
+        </div>
+        <button type="submit" class="btnSubmit">Edit</button>
+      </div>
+    </div>
+  </div>
+</form>
+
+
+{% endblock content %}
+
+
+
+<div class="container">
+  <div class="row mt-5">
+    <div class="col-sm-6">
+      <h2>Profile</h2>
+      <hr>
+      {% for item in data %}
+      <div class="card-mb-2">
+        <div class="card-body">
+          <h5> Name:&nbsp;&nbsp;&nbsp;{{item.name}}</h5>
+          <h5>Mobile Number:&nbsp;&nbsp;&nbsp;{{item.mob_no}}</h5>
+          <h5>Email Id:&nbsp;&nbsp;&nbsp;{{item.email}}</h5>
+          <h5>Date Of Birth:&nbsp;&nbsp;&nbsp;{{item.dob}}</h5>
+          <h5>Address:&nbsp;&nbsp;&nbsp;{{item.address}}</h5>
+          <h5>Username:&nbsp;&nbsp;&nbsp;{{item.username}}</h5>
+          <h5>Password:&nbsp;&nbsp;&nbsp;{{item.password}}</h5>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
